@@ -56,3 +56,28 @@ const greet = (name = "World") => `Hello ${name}`;
 
 console.log(greet());
 console.log(greet("Ester"));
+
+// Map ja filter
+
+// 8. Ülesanne: liita igale elemendile juurde +5, et uuele muutujale omandaks
+
+const newArray = [1, 2, 3, 4, 5];
+
+const addedAray = newArray.map((element) => element + 5); 
+//map -> kutsutakse funktsioon välja iga array elemendi juures, olemasoleat arrayd ei muudeta
+
+console.log(addedAray);
+
+// 9. Käime läbi 3 paramteetrit, mida saab map ja filtriga välja 
+
+const threeParameters = newArray.map((element, index, array) => {
+    console.log(element, index, array);
+
+    return element + 5;
+}); 
+
+console.log(threeParameters);
+
+//10. Muudame objektiks, et console.logides oleks paremini märgata
+
+console.log({threeParameters: threeParameters} );
