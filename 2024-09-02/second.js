@@ -9,6 +9,7 @@ function findIndex(array, number){
 console.log(findIndex(array, 2));
 
 // Arrow functions
+
 // 2. Ülesanne: FUnktsioon, mis liidab 2 numbrit kokku ja tagastab summa
 
 function sum(num1, num2){
@@ -48,3 +49,10 @@ console.log(sumNested(3)(4));
 const sumNestedArrow = num1 => num2 => num1 + num2;
 
 console.log(sumNestedArrow(2)(8));
+
+// 7. Ülesanne: AF (arrowfunc) printida "Hello (nimi)" ja kasutada string literals
+
+const greet = (name = "World") => `Hello ${name}`; 
+
+console.log(greet());
+console.log(greet("Ester"));
