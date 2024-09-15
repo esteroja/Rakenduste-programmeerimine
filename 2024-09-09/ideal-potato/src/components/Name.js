@@ -10,7 +10,7 @@ import React from "react";
 };*/
 
 const Name = ({title = "World"}) => {
-    return <h1>Hello {title}</h1>;
+    return <h2>Hello {title}</h2>;
 };
 
 export default Name;
