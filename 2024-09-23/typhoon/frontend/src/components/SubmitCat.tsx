@@ -31,16 +31,22 @@ const SubmitCat = ({ fetchCats }: SubmitCatProps) => {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    submitCat();
-    setTimeout(fetchCats, 100);
+    await submitCat();
+    fetchCats();
+    // setTimeout(fetchCats, 100);
   };
 
   return (
     <Box
-    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: 5 }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        marginTop: 5,
+      }}
     >
       <form onSubmit={handleSubmit}>
         <Stack gap={2}>
@@ -48,7 +54,9 @@ const SubmitCat = ({ fetchCats }: SubmitCatProps) => {
             label="Cat name"
             onChange={(event) => setName(event.target.value)}
           />
-          <Button type="submit">Add</Button>
+          <Button type="submit" variant="contained">
+            Add
+          </Button>
         </Stack>
       </form>
     </Box>

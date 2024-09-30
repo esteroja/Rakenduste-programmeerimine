@@ -42,7 +42,7 @@ const EditCat = ({ fetchCats, catID }: EditCatProps) => {
         onChange={(event) => setName(event.target.value)}
         sx={{ maxWidth: 100 }}
       />
-      <Button type="submit">Change</Button>
+      <Button type="submit" >Change</Button>
     </form>
   );
 };

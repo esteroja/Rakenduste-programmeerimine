@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
+
+var decoded = jwt.verify(token, 'shhhhh');
+console.log(decoded.foo)
 
 
 const root = ReactDOM.createRoot(

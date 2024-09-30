@@ -37,7 +37,12 @@ const AddTask = ({ fetchTasks }: AddTaskProps) => {
 
   return (
     <Box
-    sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: 5}}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        marginTop: 5,
+      }}
     >
       <form onSubmit={handleSubmit}>
         <Stack gap={2}>
@@ -50,9 +55,13 @@ const AddTask = ({ fetchTasks }: AddTaskProps) => {
             label="Priority"
             type="number"
             value={priority}
-            onChange={(event) => setPriority(parseInt(event.target.value, 10) || 1)}
+            onChange={(event) =>
+              setPriority(parseInt(event.target.value, 10) || 1)
+            }
           />
-          <Button type="submit">Add</Button>
+          <Button type="submit" variant="contained">
+            Add
+          </Button>
         </Stack>
       </form>
     </Box>
