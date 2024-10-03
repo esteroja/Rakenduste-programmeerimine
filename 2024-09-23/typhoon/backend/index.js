@@ -48,8 +48,13 @@ app.get("/token", (req, res) => {
 app.post("/verify", (req, res) => {
   const token = req.body.token;
   jwt.verify(token, "secret", (err, decoded) => {
+    if (err) {
+      console.log("Token not valid");
+      return res.json({ valid: false, message: "Token not valid" });
+    }
+    console.log("Token valid");
     console.log(`Title: ${decoded.title}. Priority: ${decoded.priority}`);
-    res.json({ decoded });
+    res.json({ valid: true, decoded });
   });
 });
 
