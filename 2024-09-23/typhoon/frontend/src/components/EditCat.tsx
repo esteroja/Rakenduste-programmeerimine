@@ -38,7 +38,7 @@ const EditCat = ({ fetchCats, catID }: EditCatProps) => {
   return (
     <form onSubmit={handleSubmit}>
       <TextField
-        label="Cat name"
+        label="Name"
         onChange={(event) => setName(event.target.value)}
         sx={{ maxWidth: 100 }}
       />
